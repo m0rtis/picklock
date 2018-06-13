@@ -24,5 +24,16 @@ class PicklockTest extends TestCase
             'testValue',
             Picklock::callMethod($testClass, 'test', 'testValue')
         );
+
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage(
+            sprintf(
+                'Class %s does not have the method %s',
+                \get_class($testClass),
+                'unknownMethod'
+            )
+        );
+
+        Picklock::callMethod($testClass, 'unknownMethod');
     }
 }
