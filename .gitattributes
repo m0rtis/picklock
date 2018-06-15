@@ -4,4 +4,4 @@
 /docs/ export-ignore
 /phpcs.xml export-ignore
 /phpunit.xml.dist export-ignore
-/test/ export-ignore
+/tests/ export-ignore

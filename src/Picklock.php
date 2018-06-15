@@ -5,6 +5,12 @@ namespace m0rtis\Picklock;
 
 final class Picklock
 {
+    /**
+     * @param object $object
+     * @param string $methodName
+     * @param mixed ...$args
+     * @return mixed
+     */
     public static function callMethod(object $object, string $methodName, ...$args)
     {
         $closure = function (string $methodName, ...$args) {
